@@ -1,0 +1,289 @@
+/* Cores personalizadas */
+:root {
+    --brown: #8B4513;
+    /* Marrom escuro */
+    --beige: #F5F5DC;
+    /* Bege claro */
+    --light-brown: #A0522D;
+    /* Marrom avermelhado */
+}
+
+/* Estilo para o Navbar */
+.navbar-custom {
+    background-color: var(--brown);
+}
+
+/* Estilo para o Offcanvas */
+.offcanvas-custom {
+    background-color: var(--brown);
+}
+
+/* Estilo para a Sidebar */
+.sidebar-custom {
+    background-color: var(--brown);
+}
+
+/* Estilo para os botões */
+.btn-custom {
+    background-color: var(--light-brown);
+    border: none;
+    color: white;
+    transition: background-color 0.2s ease;
+}
+
+.btn-custom:hover {
+    background-color: var(--brown);
+}
+
+/* Estilo para o conteúdo principal */
+.content-custom {
+    background-color: var(--beige); /* Bege claro */
+    background-image: url('src\\assets\\paperTexture.jpg'); /* Textura de papel */
+    background-blend-mode: color;
+    background-size: cover; /* Garante que a textura cubra todo o fundo */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-left: 25%; /* Margem para acomodar a Sidebar */
+    padding: 20px;
+    overflow-y: auto; /* Permite rolagem do conteúdo */
+    height: 100vh; /* Altura total da tela */
+}
+
+/* Efeito de hover para os links */
+.nav-link:hover {
+    background-color: rgba(210, 180, 140, 0.1);
+    border-radius: 5px;
+}
+
+/* Estilo para bordas personalizadas */
+.border-custom {
+    border-color: #D2B48C;
+    /* Bege */
+}
+
+/* Texto marrom */
+.text-brown {
+    color: var(--brown);
+}
+
+/* Fundo bege */
+.bg-beige {
+    background-color: var(--beige);
+}
+
+/* Borda marrom */
+.border-brown {
+    border-color: var(--brown) !important;
+}
+
+/* Botão marrom */
+.btn-brown {
+    background-color: var(--light-brown);
+    border: none;
+    color: white;
+    transition: background-color 0.2s ease;
+}
+
+.btn-brown:hover {
+    background-color: var(--brown);
+}
+
+/* Sombra suave */
+.shadow-lg {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Botão bege */
+.btn-beige {
+    background-color: var(--beige);
+    border: 1px solid var(--brown);
+    color: var(--brown);
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-beige:hover {
+    background-color: var(--brown);
+    color: white;
+}
+
+/* Espaçamento e alinhamento */
+.list-group {
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.list-group .btn {
+    width: 100%;
+    text-align: left;
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.25rem;
+}
+
+/* Card personalizado */
+.card-custom {
+    border: 2px solid var(--brown);
+    box-shadow: 0 2px 4px rgba(139, 69, 19, 0.1);
+}
+
+/* Campos dos exemplos */
+.field-custom {
+    border: 1px solid var(--brown);
+    transition: transform 0.2s ease;
+}
+
+.field-custom:hover {
+    transform: translateY(-2px);
+}
+
+
+/* Borda inferior para o título */
+.border-bottom-brown {
+    border-bottom: 2px solid var(--brown);
+}
+
+/* Componente de campo */
+.field-item {
+    border: 1px solid var(--brown);
+    padding: 0.5rem 1rem;
+    transition: all 0.2s ease;
+}
+
+.field-item:hover {
+    background-color: rgba(160, 82, 45, 0.15);
+    transform: translateY(-1px);
+}
+
+/* Botão de fechar personalizado */
+.btn-close-brown {
+    color: var(--brown);
+    opacity: 0.7;
+    transition: all 0.2s ease;
+    padding: 0 0.5rem;
+}
+
+.btn-close-brown:hover {
+    opacity: 1;
+    color: var(--light-brown);
+}
+
+/* Texto secundário */
+.text-muted-brown {
+    color: rgba(139, 69, 19, 0.7);
+}
+
+/* Inputs e selects personalizados */
+.form-control.bg-beige,
+.form-select.bg-beige {
+    background-color: var(--beige);
+    color: var(--brown);
+    border: 1px solid var(--brown);
+}
+
+.form-control.bg-beige:focus,
+.form-select.bg-beige:focus {
+    border-color: var(--brown);
+    box-shadow: 0 0 0 0.25rem rgba(139, 69, 19, 0.25);
+}
+
+/* Botão com borda marrom */
+.btn-outline-brown {
+    border-color: var(--brown);
+    color: var(--brown);
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-outline-brown:hover {
+    background-color: var(--brown);
+    color: white;
+}
+
+/* Borda marrom */
+.border-brown {
+    border-color: var(--brown) !important;
+}
+
+/* Texto marrom */
+.text-brown {
+    color: var(--brown);
+}
+
+/* Botão marrom */
+.btn-brown {
+    background-color: var(--light-brown);
+    border: none;
+    color: white;
+    transition: background-color 0.2s ease;
+}
+
+.btn-brown:hover {
+    background-color: var(--brown);
+}
+
+/* Botão com borda marrom */
+.btn-outline-brown {
+    border-color: var(--brown);
+    color: var(--brown);
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-outline-brown:hover {
+    background-color: var(--brown);
+    color: white;
+}
+
+/* Fundo semi-transparente para os campos */
+.bg-light-brown-transparent {
+    background-color: rgba(160, 82, 45, 0.1);
+}
+
+/* Borda marrom */
+.border-brown {
+    border-color: var(--brown) !important;
+}
+
+/* Texto marrom */
+.text-brown {
+    color: var(--brown);
+}
+
+/* Estilo para o Navbar */
+.navbar-custom {
+    background-color: var(--brown);
+    /* Marrom escuro */
+    border-bottom: 2px solid var(--light-brown);
+    /* Borda inferior marrom avermelhado */
+}
+
+/* Estilo para o Offcanvas */
+.offcanvas-custom {
+    background-color: var(--brown);
+    /* Marrom escuro */
+}
+
+/* Estilo para a Sidebar */
+.sidebar-custom {
+    background-color: var(--brown);
+    /* Marrom escuro */
+    border-right: 2px solid var(--light-brown);
+    /* Borda direita marrom avermelhado */
+}
+
+/* Botão personalizado */
+.btn-custom {
+    background-color: var(--light-brown);
+    /* Marrom avermelhado */
+    border: none;
+    color: white;
+    transition: background-color 0.2s ease;
+}
+
+.btn-custom:hover {
+    background-color: var(--brown);
+    /* Marrom escuro */
+}
+
+/* Borda personalizada */
+.border-custom {
+    border-color: var(--light-brown);
+    /* Marrom avermelhado */
+}
