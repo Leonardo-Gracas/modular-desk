@@ -23,7 +23,7 @@ function Characters() {
       {/* Botão para Criar Personagem */}
       <button
         className="btn btn-brown mb-4"
-        onClick={() => navigate("/create-character")}
+        onClick={() => navigate("/modular-desk/create-character")}
       >
         Criar Personagem
       </button>
@@ -38,7 +38,7 @@ function Characters() {
           {characters.map((char, index) => (
             <Link
               key={index}
-              to={`/character/${char.id}`}
+              to={`/modular-desk/character/${char.id}`}
               className="btn btn-beige text-brown text-start mb-2"
             >
               <strong>ID:</strong> {char.id} - <strong>Nome:</strong>{" "}

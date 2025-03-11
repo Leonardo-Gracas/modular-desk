@@ -9,7 +9,7 @@ import ModelConfigure from './pages/ModelConfigure/ModelConfigure';
 import CharacterDetails from './pages/Characters/Details/CharacterDetails';
 import Match from './pages/Match/Match';
 import { Container, Row, Col, Nav, Navbar, Offcanvas, Button } from 'react-bootstrap';
-import "/modular-desk/index.css";
+import "./index.css";
 
 function Layout({ children }) {
     const [showOffcanvas, setShowOffcanvas] = useState(false);
