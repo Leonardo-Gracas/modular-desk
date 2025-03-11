@@ -43,9 +43,9 @@ function Layout({ children }) {
                     </Offcanvas.Header>
                     <Offcanvas.Body>
                         <Nav className="flex-column">
-                            <Nav.Link as={Link} to="/" onClick={handleCloseOffcanvas} className="text-light btn-custom mb-2">🏠 Home</Nav.Link>
-                            <Nav.Link as={Link} to="/models" onClick={handleCloseOffcanvas} className="text-light btn-custom mb-2">📜 Modelos</Nav.Link>
-                            <Nav.Link as={Link} to="/characters" onClick={handleCloseOffcanvas} className="text-light btn-custom">🎭 Personagens</Nav.Link>
+                            <Nav.Link as={Link} to="/modular-desk/" onClick={handleCloseOffcanvas} className="text-light btn-custom mb-2">🏠 Home</Nav.Link>
+                            <Nav.Link as={Link} to="/modular-desk/models" onClick={handleCloseOffcanvas} className="text-light btn-custom mb-2">📜 Modelos</Nav.Link>
+                            <Nav.Link as={Link} to="/modular-desk/characters" onClick={handleCloseOffcanvas} className="text-light btn-custom">🎭 Personagens</Nav.Link>
                         </Nav>
                     </Offcanvas.Body>
                 </Offcanvas>
@@ -56,9 +56,9 @@ function Layout({ children }) {
                 {!isMatchPage && (
                     <Col md={3} lg={2} className="d-none d-md-block bg-dark text-light vh-100 p-3 sidebar-custom position-fixed">
                         <Nav className="flex-column">
-                            <Nav.Link as={Link} to="/" className="btn btn-custom w-100 text-start mb-2">🏠 Home</Nav.Link>
-                            <Nav.Link as={Link} to="/models" className="btn btn-custom w-100 text-start mb-2">📜 Modelos</Nav.Link>
-                            <Nav.Link as={Link} to="/characters" className="btn btn-custom w-100 text-start">🎭 Personagens</Nav.Link>
+                            <Nav.Link as={Link} to="/modular-desk/" className="btn btn-custom w-100 text-start mb-2">🏠 Home</Nav.Link>
+                            <Nav.Link as={Link} to="/modular-desk/models" className="btn btn-custom w-100 text-start mb-2">📜 Modelos</Nav.Link>
+                            <Nav.Link as={Link} to="/modular-desk/characters" className="btn btn-custom w-100 text-start">🎭 Personagens</Nav.Link>
                         </Nav>
                     </Col>
                 )}
@@ -76,13 +76,13 @@ function App() {
     return (
         <Layout>
             <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/models" element={<Models />} />
-                <Route path="/characters" element={<Characters />} />
-                <Route path="/create-character" element={<CharacterForm />} />
-                <Route path="/configure-model/:modelId?" element={<ModelConfigure />} />
-                <Route path="/character/:characterId" element={<CharacterDetails />} />
-                <Route path="/match/:characterId" element={<Match />} />
+                <Route path="/modular-desk/" element={<Home />} />
+                <Route path="/modular-desk/models" element={<Models />} />
+                <Route path="/modular-desk/characters" element={<Characters />} />
+                <Route path="/modular-desk/create-character" element={<CharacterForm />} />
+                <Route path="/modular-desk/configure-model/:modelId?" element={<ModelConfigure />} />
+                <Route path="/modular-desk/character/:characterId" element={<CharacterDetails />} />
+                <Route path="/modular-desk/match/:characterId" element={<Match />} />
             </Routes>
         </Layout>
     );
