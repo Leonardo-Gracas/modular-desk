@@ -76,7 +76,7 @@ function App() {
     return (
         <Layout>
             <Routes>
-                <Route path="/modular-desk/" element={<Home />} />
+                <Route path="/modular-desk" element={<Home />} />
                 <Route path="/modular-desk/models" element={<Models />} />
                 <Route path="/modular-desk/characters" element={<Characters />} />
                 <Route path="/modular-desk/create-character" element={<CharacterForm />} />

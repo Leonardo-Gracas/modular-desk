@@ -85,7 +85,7 @@ function CharacterDetails() {
                             <h1 className="text-center text-brown">
                                 {mainFields.find(f => f.title === "Nome")?.value || "Personagem Sem Nome"}
                             </h1>
-                            <Link to={`/match/${characterId}`} className="btn btn-outline-brown">
+                            <Link to={`/modular-desk/match/${characterId}`} className="btn btn-outline-brown">
                                 Partida
                             </Link>
                             <button className="btn btn-outline-danger" onClick={handleRemoveCharacter}>

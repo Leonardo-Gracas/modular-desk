@@ -24,7 +24,7 @@ const Models = () => {
             </p>
 
             {/* Botão para criar novo modelo */}
-            <Link className="btn btn-brown mb-4" to="/configure-model/">
+            <Link className="btn btn-brown mb-4" to="/modular-desk/configure-model/">
                 Criar Novo Modelo
             </Link>
 
@@ -39,7 +39,7 @@ const Models = () => {
                 {models.map((model, index) => (
                     <Link
                         key={index}
-                        to={`/configure-model/${model.id}`}
+                        to={`/modular-desk/configure-model/${model.id}`}
                         className="btn btn-beige text-brown text-start mb-2"
                     >
                         <strong>ID:</strong> {model.id}, <strong>Nome:</strong> {model.name}

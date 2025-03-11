@@ -18,7 +18,7 @@ function Home() {
           <div className="card shadow-lg p-3 mb-4 bg-beige border-brown">
             <h3 className="text-brown">1️⃣ Criar um Modelo</h3>
             <p className="text-brown">Defina a estrutura de seus personagens criando um modelo personalizado.</p>
-            <Link to="/models" className="btn btn-brown">📜 Gerenciar Modelos</Link>
+            <Link to="/modular-desk/models" className="btn btn-brown">📜 Gerenciar Modelos</Link>
           </div>
         </div>
 
@@ -27,7 +27,7 @@ function Home() {
           <div className="card shadow-lg p-3 mb-4 bg-beige border-brown">
             <h3 className="text-brown">2️⃣ Criar um Personagem</h3>
             <p className="text-brown">Preencha uma ficha com base no modelo escolhido e adicione informações.</p>
-            <Link to="/create-character" className="btn btn-brown">🎭 Criar Personagem</Link>
+            <Link to="/modular-desk/create-character" className="btn btn-brown">🎭 Criar Personagem</Link>
           </div>
         </div>
 
@@ -36,7 +36,7 @@ function Home() {
           <div className="card shadow-lg p-3 mb-4 bg-beige border-brown">
             <h3 className="text-brown">3️⃣ Visualizar Personagens</h3>
             <p className="text-brown">Consulte e edite os personagens já criados de maneira fácil.</p>
-            <Link to="/characters" className="btn btn-brown">📂 Ver Personagens</Link>
+            <Link to="/modular-desk/characters" className="btn btn-brown">📂 Ver Personagens</Link>
           </div>
         </div>
       </div>
