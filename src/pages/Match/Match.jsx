@@ -18,18 +18,16 @@ const Match = () => {
             (char) => char.id.toString() === characterId
         );
         if (foundCharacter) {
-            console.log("Personagem carregado:", foundCharacter);
             if (!foundCharacter.talents) foundCharacter.talents = [];
             if (!foundCharacter.inventory) foundCharacter.inventory = [];
-            setCharacter(foundCharacter);
-            setDisplayChar(foundCharacter)
+            setCharacter(foundCharacter)
             setIsConnected(false)
         }
     }, [characterId]);
 
     const handleClose = () => {
         console.log("Desconectado do WebSocket!")
-        Navigate({to: "/characters"})
+        Navigate({ to: "/characters" })
     }
 
     const WS_url = "ws://localhost:8000?username=" + username;
@@ -40,10 +38,9 @@ const Match = () => {
         onClose: () => handleClose,
         onMessage: (message) => {
             const data = JSON.parse(message.data);
-            console.log("Mensagem recebida do WebSocket:", data);
+            //console.log("Mensagem recebida do WebSocket:", data);
 
             if (data.type === "user_list") {
-                console.log(data)
                 const mySelf = data.users.find(p => p.character.id === character.id)
                 const otherPlayers = data.users.filter(p => p.character.id !== character.id);
                 setPlayers([mySelf, ...otherPlayers]); // Garante que o personagem do usuário sempre esteja em primeiro
@@ -61,9 +58,45 @@ const Match = () => {
                 character
             };
             sendMessage(JSON.stringify(payload));
-            console.log("Enviado ao WebSocket:", payload);
+            //console.log("Enviado ao WebSocket:", payload);
         }
     };
+
+    useEffect(() => {
+        if (!displayChar) {
+            setDisplayChar(character)
+            return
+        }
+
+        if (displayChar.id != character.id) {
+            return
+        }
+
+        const payload = {
+            type: "set_username",
+            username,
+            character: displayChar
+        };
+        //console.log(JSON.stringify(payload))
+        sendMessage(JSON.stringify(payload));
+    }, [displayChar])
+
+    useEffect(() => {
+        if(!players){
+            return
+        }
+        if(!displayChar){
+            return
+        }
+        const current = players.find(x => displayChar.id == x.character.id)
+        if(current){
+            if(current.character.id == characterId){
+                return
+            }
+            setDisplayChar(current.character)
+        }
+
+    }, [players])
 
     return (
         !isConnected ? (
@@ -71,13 +104,13 @@ const Match = () => {
                 <div className="p-4 border-brown rounded bg-light-brown-transparent shadow">
                     <h3 className="text-brown text-center">Digite seu nome de usuário</h3>
                     <form onSubmit={handleUsernameSubmit} className="d-flex flex-column">
-                        <input 
-                            type="text" 
-                            value={username} 
-                            onChange={(e) => setUsername(e.target.value)} 
+                        <input
+                            type="text"
+                            value={username}
+                            onChange={(e) => setUsername(e.target.value)}
                             placeholder="Nome de usuário"
                             className="form-control bg-beige text-brown border-brown my-2"
-                            required 
+                            required
                         />
                         <button type="submit" className="btn btn-brown w-100">Entrar</button>
                     </form>

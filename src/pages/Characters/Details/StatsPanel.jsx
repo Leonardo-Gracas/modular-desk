@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-const StatsPanel = ({ character = {}, onChange }) => {
+const StatsPanel = ({ character = {}, onChange, isMain = true }) => {
   const stats = character.stats;
 
   // Inicializa as propriedades 'current' e 'locked' caso não existam
@@ -99,14 +99,19 @@ const StatsPanel = ({ character = {}, onChange }) => {
                 </p>
               </div>
               <div className="d-flex align-items-center">
-                <button
-                  className="btn btn-link p-0 me-2"
-                  onClick={() => toggleLock(index)}
-                  title={stat.locked ? "Desbloquear" : "Bloquear"}
-                >
-                  {stat.locked ? "🔒" : "🔓"}
-                </button>
-                {!stat.locked && (
+                {isMain 
+                ? <button
+                    className="btn btn-link p-0 me-2"
+                    onClick={() => toggleLock(index)}
+                    title={stat.locked ? "Desbloquear" : "Bloquear"}
+                  >
+                    {stat.locked ? "🔒" : "🔓"}
+                  </button>
+                  : <button className="btn btn-link p-0 me-2">
+                    🔒
+                  </button>
+                }
+                {!stat.locked && isMain && (
                   <>
                     <button
                       className="btn btn-outline-brown btn-sm me-2"

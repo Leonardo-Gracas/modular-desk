@@ -77,7 +77,7 @@ const MatchCharacterDetails = ({ character, onUpdateCharacter, isMain }) => {
                             </div>
                         )}
 
-                        {stats.length > 0 && <StatsPanel onChange={onUpdateCharacter} character={character} />}
+                        {stats.length > 0 && <StatsPanel onChange={onUpdateCharacter} isMain={isMain} character={character} />}
 
                         <AttributesGroup character={character} onChange={onUpdateCharacter} />
                     </div>
@@ -86,7 +86,7 @@ const MatchCharacterDetails = ({ character, onUpdateCharacter, isMain }) => {
                 <div className="col-md-5 row" style={{ height: "fit-content" }}>
                     {isMain &&
                         <>
-                            <InventoryPanel inventory={character.inventory} onUpdateInventory={handleUpdateInventory} />
+                            <InventoryPanel inventory={character.inventory} onUpdateInventory={handleUpdateInventory} character={character}/>
                             <TalentsPanel onChange={onUpdateCharacter} character={character} />
                         </>
                     }
