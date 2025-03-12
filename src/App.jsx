@@ -16,13 +16,13 @@ function Layout({ children }) {
     const location = useLocation();
 
     // Verifica se está na página de Match para ocultar a sidebar
-    const isMatchPage = location.pathname.startsWith('/match/');
+    const isMatchPage = location.pathname.startsWith('/modular-desk/match/');
 
     const handleCloseOffcanvas = () => setShowOffcanvas(false);
     const handleShowOffcanvas = () => setShowOffcanvas(true);
 
     return (
-        <Container fluid className="vh-100 p-0 d-flex flex-column">
+        <div className="vh-100 p-0 d-flex flex-column">
             {/* Navbar para dispositivos móveis */}
             <Navbar bg="dark" variant="dark" expand={false} className="d-md-none navbar-custom fixed-top">
                 <Container fluid>
@@ -51,24 +51,24 @@ function Layout({ children }) {
                 </Offcanvas>
             )}
 
-            <Row className="g-0 flex-grow-1">
+            <div className="row g-0 flex-gdiv-1">
                 {/* Sidebar para telas maiores (excluída na tela de Match) */}
                 {!isMatchPage && (
-                    <Col md={3} lg={2} className="d-none d-md-block bg-dark text-light vh-100 p-3 sidebar-custom position-fixed">
+                    <div className="col-md-3 col-lg-2 d-none d-md-block bg-dark text-light vh-100 p-3 sidebar-custom position-fixed">
                         <Nav className="flex-column">
                             <Nav.Link as={Link} to="/modular-desk/" className="btn btn-custom w-100 text-start mb-2">🏠 Home</Nav.Link>
                             <Nav.Link as={Link} to="/modular-desk/models" className="btn btn-custom w-100 text-start mb-2">📜 Modelos</Nav.Link>
                             <Nav.Link as={Link} to="/modular-desk/characters" className="btn btn-custom w-100 text-start">🎭 Personagens</Nav.Link>
                         </Nav>
-                    </Col>
+                    </div>
                 )}
 
                 {/* Conteúdo Principal */}
-                <Col md={isMatchPage ? 12 : 9} lg={isMatchPage ? 12 : 10} className="p-0 bg-light content-custom ms-auto">
+                <Col md={isMatchPage ? 12 : 9} lg={isMatchPage ? 12 : 10} className="p-0 bg-light content-custom ms-auto rounded-0">
                     {children}
                 </Col>
-            </Row>
-        </Container>
+            </div>
+        </div>
     );
 }
 

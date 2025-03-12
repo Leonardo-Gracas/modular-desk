@@ -99,16 +99,13 @@ const StatsPanel = ({ character = {}, onChange, isMain = true }) => {
                 </p>
               </div>
               <div className="d-flex align-items-center">
-                {isMain 
-                ? <button
+                {isMain
+                  && <button
                     className="btn btn-link p-0 me-2"
                     onClick={() => toggleLock(index)}
                     title={stat.locked ? "Desbloquear" : "Bloquear"}
                   >
                     {stat.locked ? "🔒" : "🔓"}
-                  </button>
-                  : <button className="btn btn-link p-0 me-2">
-                    🔒
                   </button>
                 }
                 {!stat.locked && isMain && (

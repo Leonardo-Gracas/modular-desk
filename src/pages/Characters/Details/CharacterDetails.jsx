@@ -85,12 +85,14 @@ function CharacterDetails() {
                             <h1 className="text-center text-brown">
                                 {mainFields.find(f => f.title === "Nome")?.value || "Personagem Sem Nome"}
                             </h1>
-                            <Link to={`/modular-desk/match/${characterId}`} className="btn btn-outline-brown">
-                                Partida
-                            </Link>
-                            <button className="btn btn-outline-danger" onClick={handleRemoveCharacter}>
-                                Excluir
-                            </button>
+                            <div>
+                                <Link to={`/modular-desk/match/${characterId}`} className="btn btn-outline-brown me-2">
+                                    Partida
+                                </Link>
+                                <button className="btn btn-outline-danger" onClick={handleRemoveCharacter}>
+                                    Excluir
+                                </button>
+                            </div>
                         </div>
                         <hr className="border-brown mb-4" />
 
